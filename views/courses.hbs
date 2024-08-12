@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-md-12">
+        <br>
+        <br><br><h2>Courses <a href="/courses/add" class="btn btn-success float-end">Add New Course</a> </h2>
+        <hr />
+
+        <div class="table-responsive">
+            <table class="table table-bordered-custom">
+                <thead>
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Description</th>
+                        <th></th> <!-- Empty header for the remove button column -->
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each courses}}
+                    <tr>
+                        <td><a href="/course/{{this.courseId}}">{{this.courseCode}}</a></td>
+                        <td><a href="/students?course={{this.courseId}}">{{this.courseDescription}}</a></td>
+                        <td>
+                            <a href="/course/delete/{{this.courseId}}" class="btn btn-danger">Remove</a>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+
+        {{#unless courses.length}}
+        <div class="col-md-12 text-center">
+            <strong>{{message}}</strong>
+        </div>
+        {{/unless}}
+    </div>
+</div>

@@ -1,0 +1,83 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Trebuchet:wght@400;700&display=swap');
+
+/* General Styles */
+body, html {
+    font-family: 'Trebuchet MS', sans-serif;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #dadae9, #6e6ef8); /* Light purple gradient background */
+    height: 100%;
+}
+
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background-color: #4c4c82; /* Dark purple background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 10px 20px;
+}
+
+/* Navigation Brand */
+.navbar-brand {
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #ffffff; /* White text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Text shadow */
+    font-weight: 700;
+}
+
+/* Navigation Links */
+.nav-link {
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #e0e0ff; /* Light purple text color */
+}
+
+.nav-link:hover {
+    color: #ffffff; /* Hover white text color */
+}
+
+/* Primary Button */
+.btn-primary {
+    background-color: #6a5acd; /* Slate blue background color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow */
+    color: #ffffff; /* White text color */
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #836fff; /* Hover light slate blue background color */
+}
+
+/* Table Rows (Odd) */
+table tr:nth-child(odd) td {
+    background-color: #d3d3e6; /* Light purple background color for odd rows */
+}
+
+/* Heading Elements */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #4c4c82; /* Dark purple text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Text shadow */
+}
+
+/* Anchor Elements */
+a {
+    color: #4c4c82; /* Dark purple text color */
+}
+
+a:hover {
+    color: #6a5acd; /* Hover slate blue text color */
+}
+
+/* Fieldset Legends */
+legend {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #3b3b8a; /* Dark purple text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Text shadow */
+}
+
