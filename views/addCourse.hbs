@@ -1,98 +1,28 @@
 <div class="text-container">
     <div class="row">
         <main class="col-md-12">
-            <h1 style="font-size: 3.5em; text-align: left; color: rgb(18, 9, 64); margin-top: 100px; text-shadow: -1px -1px 0 #f1eae9;">Add Student</h1>
+            <h1 style="font-size: 3.5em; text-align: left; color: rgb(18, 9, 64); margin-top: 100px; text-shadow: -1px -1px 0 #f1eae9;">Add Course</h1>
             
-            <form action="/students/add" method="POST">
+            <form action="/courses/add" method="POST">
                 <fieldset>
-                    <legend><br>Personal Information</legend>
+                    <legend><br>Course Information</legend>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="firstName">First Name:</label>
-                                <input class="form-control" id="firstName" name="firstName" type="text" required>
+                                <label for="courseCode">Course Code:</label>
+                                <input class="form-control" id="courseCode" name="courseCode" type="text" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="lastName">Last Name:</label>
-                                <input class="form-control" id="lastName" name="lastName" type="text" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="email">Email:</label>
-                                <input class="form-control" id="email" name="email" type="email" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="addressStreet">Address (Street):</label>
-                                <input class="form-control" id="addressStreet" name="addressStreet" type="text">
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="addressCity">Address (City):</label>
-                                <input class="form-control" id="addressCity" name="addressCity" type="text">
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="addressProvince">Address (Province):</label>
-                                <input class="form-control" id="addressProvince" name="addressProvince" type="text"><br>
-                            </div>
-                        </div>
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <legend><br>Academic Information</legend>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label>College Employment:</label><br>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="isTA" name="TA" {{#if student.TA}}checked{{/if}}>
-                                    <label class="form-check-label" for="isTA">Teaching Assistant</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label>Enrollment Status:</label><br>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" id="fullTime" name="status" value="Full Time">
-                                    <label class="form-check-label" for="fullTime">Full Time</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" id="partTime" name="status" value="Part Time">
-                                    <label class="form-check-label" for="partTime">Part Time</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="course">Enrolled in Course:</label>
-                                {{#if courses}}
-                                    <select class="form-select" name="course" id="course">
-                                        <option value="">Select Course</option>
-                                        {{#each courses}}
-                                            <option value="{{courseId}}">{{courseCode}}</option>
-                                        {{/each}}
-                                    </select>
-                                {{else}}
-                                    <div>No Courses</div>
-                                {{/if}}
+                                <label for="courseDescription">Course Description:</label>
+                                <input class="form-control" id="courseDescription" name="courseDescription" type="text" required>
                             </div>
                         </div>
                     </div>
                 </fieldset>
                 <hr />
-                <input type="submit" class="btn btn-primary float-right" value="Add Student">
+                <input type="submit" class="btn btn-primary float-right" value="Add Course">
             </form>
         </main>
     </div>
